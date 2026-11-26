@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voices — MetalLabs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <!-- Header -->
+    <header class="page-head">
+      <div class="ph-left">
+        <h1 class="page-title">Voices</h1>
+        <p class="page-sub">Browse, preview, and copy voice IDs for your agents.</p>
+      </div>
+
+      <div class="provider-tabs" id="providerTabs">
+        <button class="ptab" data-provider="azure">Azure</button>
+        <button class="ptab active" data-provider="xai">xAI</button>
+      </div>
+    </header>
+
+    <!-- Search -->
+    <div class="search">
+      <span class="search-icon">⌕</span>
+      <input id="search" type="text" placeholder="Search by name, accent, language, use case…" />
+      <span class="voice-count" id="voiceCount"></span>
+    </div>
+
+    <!-- Grid -->
+    <div class="voice-grid" id="voiceGrid"></div>
+    <div class="list-status" id="listStatus"></div>
+  </main>
+
+  <audio id="player"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
